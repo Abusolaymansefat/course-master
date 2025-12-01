@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const images = ["/banner1.jpg", "/banner2.jpg", "/banner3.jpg"];
+const images = ["https://i.ibb.co/kg71Yh9V/istockphoto-1998218854-612x612.jpg",
+     "https://i.ibb.co/kg71Yh9V/istockphoto-1998218854-612x612.jpg",
+      "https://i.ibb.co/7JVNf2N1/images.jpg"];
 
 export default function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);
