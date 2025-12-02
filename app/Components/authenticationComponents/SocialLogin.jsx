@@ -1,28 +1,30 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { signIn } from "next-auth/react";
 
 export default function SocialLogin() {
-  const handleSocialLogin = (provider) => {
-    signIn(provider);
-  };
-
   return (
-    <div className="flex justify-center items-center gap-4 mb-6">
-      <div
-        onClick={() => handleSocialLogin("github")}
-        className="w-[50px] h-[50px] bg-gray-200 dark:bg-gray-700 rounded-full flex justify-center items-center cursor-pointer"
+    <div className="flex justify-center gap-4 mt-3">
+      <motion.div
+        whileHover={{ scale: 1.15 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => signIn("github")}
+        className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center cursor-pointer"
       >
-        <FaGithub size={22} />
-      </div>
-      <div
-        onClick={() => handleSocialLogin("google")}
-        className="w-[50px] h-[50px] bg-gray-200 dark:bg-gray-700 rounded-full flex justify-center items-center cursor-pointer"
+        <FaGithub size={26} />
+      </motion.div>
+
+      <motion.div
+        whileHover={{ scale: 1.15 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => signIn("google")}
+        className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center cursor-pointer"
       >
-        <FcGoogle size={22} />
-      </div>
+        <FcGoogle size={26} />
+      </motion.div>
     </div>
   );
 }

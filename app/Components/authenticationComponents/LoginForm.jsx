@@ -85,7 +85,7 @@ export default function LoginForm() {
       <SocialLogin />
 
       <span className="text-center block mt-4">
-        Don't have an account?{" "}
+        don't have an account?{" "}
         <Link
           href="/register"
           className="text-[var(--color-primary)] dark:text-[var(--color-primary-dark)]"
