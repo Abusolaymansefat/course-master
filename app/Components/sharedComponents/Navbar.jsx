@@ -7,7 +7,7 @@ import { signOut, useSession } from "next-auth/react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { data: session } = useSession(); // get logged-in user
+  // const { data: session } = useSession(); // get logged-in user
 
   return (
     <nav className="bg-blue-600 text-white shadow-md">
@@ -24,7 +24,7 @@ export default function Navbar() {
             <Link href="/" className="hover:text-gray-200">Home</Link>
             <Link href="/courses" className="hover:text-gray-200">Courses</Link>
 
-            {session ? (
+            {/* {session ? (
               <>
                 <Link href="/dashboard" className="hover:text-gray-200">Dashboard</Link>
                 <button
@@ -36,7 +36,7 @@ export default function Navbar() {
               </>
             ) : (
               <Link href="/login" className="hover:text-gray-200">Login</Link>
-            )}
+            )} */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -55,7 +55,7 @@ export default function Navbar() {
           <Link href="/" className="block px-4 py-2 hover:bg-blue-600">Home</Link>
           <Link href="/courses" className="block px-4 py-2 hover:bg-blue-600">Courses</Link>
 
-          {session ? (
+          {/* {session ? (
             <>
               <Link href="/dashboard" className="block px-4 py-2 hover:bg-blue-600">Dashboard</Link>
               <button
@@ -67,7 +67,7 @@ export default function Navbar() {
             </>
           ) : (
             <Link href="/login" className="block px-4 py-2 hover:bg-blue-600">Login</Link>
-          )}
+          )} */}
         </div>
       )}
     </nav>
